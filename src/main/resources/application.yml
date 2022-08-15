@@ -1,0 +1,56 @@
+telegram:
+  bot:
+    userName:
+    token:
+
+google:
+  client:
+    id:
+    secret:
+  auth.uri: "https://accounts.google.com/o/oauth2/auth"
+  token:
+    uri: "https://oauth2.googleapis.com/token"
+    path: "tokens"
+  redirect.uris: "http://localhost:${server.port}/Callback"
+
+sheets:
+  range:
+  spreadsheetId:
+
+portfolio:
+  scheduled:
+    period: "#{15 * 60 * 1000}"
+    initial.delay: "#{1 * 10 * 1000}"
+
+wallet.apiKey:
+  avax:
+  bsc:
+  eth:
+
+binance:
+  apiKey:
+  secretKey:
+
+logging:
+  level:
+    root: INFO
+    com:
+      forestik: DEBUG
+
+server:
+  port: 8081
+
+calendar:
+  calendarId: null
+
+spring:
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USER}
+    password: ${DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties.hibernate.jdbc.lob.non_contextual_creation: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
